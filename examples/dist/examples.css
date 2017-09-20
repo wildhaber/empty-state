@@ -1,9 +1,14 @@
 .s-profile-mini {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 50%, transparent 50%, transparent 100%);
-  background-size: calc(100% - 90px - 7px) 10px, calc(80% - 90px - 7px) 10px, 80px 80px;
-  background-position: 90px 17px, 90px 34px, 0px 0px;
+  background: linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), radial-gradient(circle at center, #D8D8D8 0, #D8D8D8 50%, transparent 50%, transparent 100%);
+  background-size: calc(100% - 90px - 7px) 10px, calc(90% - 90px - 7px) 10px, calc(60% - 90px - 7px) 10px, 80px 80px;
+  background-position: 90px 17px, 90px 34px, 90px 51px, 0px 0px;
   background-repeat: no-repeat;
   width: 300px;
-  height: 80px;
-  background-color: #f1f1f1;
-  border-radius: 7px; }
+  height: 80px; }
+
+.s-text {
+  background: linear-gradient(180deg, yellowgreen, yellowgreen), linear-gradient(180deg, #cccccc, #cccccc), linear-gradient(180deg, #cccccc, #cccccc), linear-gradient(180deg, #cccccc, #cccccc), linear-gradient(180deg, #cccccc, #cccccc);
+  background-size: calc(80% - 28px) 56px, calc(100% - 28px) 28px, calc(100% - 28px) 28px, calc(100% - 28px) 28px, calc(60% - 28px) 28px;
+  background-position: 14px -14px, 14px 56px, 14px 98px, 14px 140px, 14px 182px;
+  background-repeat: no-repeat;
+  height: 400px; }

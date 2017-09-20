@@ -1,23 +1,9 @@
 @import './../mixin';
 
-$gutter-default: 7px;
-$typo-size-default: 10px;
-$color-default: rgba(0,0,0,0.2);
-$color-dark: rgba(0,0,0,0.4);
-$color-light: rgba(0,0,0,0.1);
-
 .s-profile-mini {
+    @include skeleton-profile-small-300x80();
+}
 
-    $off-left: 90px;
-    $off-top: 10px;
-
-    @include skeleton(
-        rect($color-default, calc(100% - #{$off-left} - #{$gutter-default}), $typo-size-default, #{$off-left}, ($gutter-default + $off-top)),
-        rect($color-default, calc(80% - #{$off-left} - #{$gutter-default}), $typo-size-default, #{$off-left}, ($gutter-default * 2 + $typo-size-default + $off-top)),
-        circle($color-default, ($typo-size-default * 4), 0px, 0px)
-    );
-    width: 300px;
-    height: 80px;
-    background-color: #f1f1f1;
-    border-radius: $gutter-default;
+.s-text {
+    @include skeleton-text-block(yellowgreen, #cccccc, 14px, 28px, 400px);
 }
