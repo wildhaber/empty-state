@@ -1,0 +1,42 @@
+@function shape($background, $background-size, $background-position) {
+    @return (
+        bg: $background,
+        size: $background-size,
+        position: $background-position
+    );
+}
+
+@function rect($color, $width, $height, $x, $y) {
+    @return shape(
+        (linear-gradient(180deg, $color, $color)),
+        ($width $height),
+        ($x $y)
+    );
+}
+
+@function circle($color, $radius, $x, $y) {
+    @return shape(
+        (radial-gradient(circle at center, $color 0, $color 50%, transparent 50%, transparent 100%)),
+        (($radius * 2) ($radius * 2)),
+        ($x $y)
+    );
+}
+
+@mixin skeleton($shapes...) {
+    $background-list: ();
+    $background-size-list: ();
+    $background-position-list: ();
+
+    @each $shape in $shapes {
+        $background-list: append($background-list, map-get($shape, bg), 'comma');
+        $background-size-list: append($background-size-list, map-get($shape, size), 'comma');
+        $background-position-list: append($background-position-list, map-get($shape, position), 'comma');
+    }
+
+    background: $background-list;
+    background-size: $background-size-list;
+    background-position: $background-position-list;
+
+    background-repeat: no-repeat;
+
+}

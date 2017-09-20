@@ -4,7 +4,10 @@
   "description": "Empty state skeleton builder scss mixins",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "build:watch": "./node_modules/.bin/webpack --config webpack.config.js --watch",
+    "serve": "./node_modules/.bin/http-server examples/dist"
   },
   "repository": {
     "type": "git",
@@ -24,5 +27,14 @@
   "bugs": {
     "url": "https://github.com/wildhaber/skeleton-builder/issues"
   },
-  "homepage": "https://github.com/wildhaber/skeleton-builder#readme"
+  "homepage": "https://github.com/wildhaber/skeleton-builder#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "http-server": "^0.10.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.6.0"
+  }
 }

@@ -1,0 +1,9 @@
+.s-profile-mini {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 50%, transparent 50%, transparent 100%);
+  background-size: calc(100% - 90px - 7px) 10px, calc(80% - 90px - 7px) 10px, 80px 80px;
+  background-position: 90px 17px, 90px 34px, 0px 0px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 80px;
+  background-color: #f1f1f1;
+  border-radius: 7px; }
