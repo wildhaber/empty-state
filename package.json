@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wildhaber/skeleton-builder.git"
+    "url": "git+https://github.com/wildhaber/empty-state.git"
   },
   "keywords": [
     "empty",
@@ -25,9 +25,9 @@
   "author": "Raphael Wildhaber",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wildhaber/skeleton-builder/issues"
+    "url": "https://github.com/wildhaber/empty-state/issues"
   },
-  "homepage": "https://github.com/wildhaber/skeleton-builder#readme",
+  "homepage": "https://github.com/wildhaber/empty-state#readme",
   "devDependencies": {
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.7",
