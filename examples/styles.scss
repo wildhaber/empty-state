@@ -5,5 +5,14 @@
 }
 
 .s-text {
-    @include skeleton-text-block(yellowgreen, #cccccc, 14px, 28px, 400px);
+    //@include skeleton-text-block(yellowgreen, #cccccc, 14px, 28px, 400px);
+    @include skeleton-text-block();
+}
+
+.s-text-lines {
+    @include skeleton(
+        lines(5, #cccccc)...
+    );
+
+    height: 300px;
 }

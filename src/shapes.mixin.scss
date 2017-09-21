@@ -1,3 +1,16 @@
+@function lines($count: 15, $color: #fcfcfc, $width: 100%, $height: 10px, $gutter: 14px, $x: 0, $y: 0) {
+    $lines : ();
+    @for $i from 0 to $count {
+        $offset-lines: 0;
+        @if($i > 0) {
+            $offset-lines: ($height * $i);
+        }
+        $offset-y: ($gutter * $i) + $offset-lines + $y;
+        $lines : append($lines, rect($color, $width, $height, $x, $offset-y));
+    }
+    @return $lines;
+}
+
 @function shape($background, $background-size, $background-position) {
     @return (
         bg: $background,
@@ -23,6 +36,9 @@
 }
 
 @mixin skeleton($shapes...) {
+
+    @debug $shapes;
+
     $background-list: ();
     $background-size-list: ();
     $background-position-list: ();
