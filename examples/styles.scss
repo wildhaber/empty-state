@@ -10,9 +10,13 @@
 }
 
 .s-text-lines {
-    @include skeleton(
-        lines(5, #cccccc)...
+
+    $lines: join(
+        lines(2, #B8B8B8, 90%, 16px, 12px, center, 0px, 50%, true, 2px, white),
+        lines(5, #D8D8D8, 100%, 14px, 7px, center, 70px, 90%)
     );
+
+    @include skeleton($lines...);
 
     height: 300px;
 }

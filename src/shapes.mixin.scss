@@ -1,16 +1,3 @@
-@function lines($count: 15, $color: #fcfcfc, $width: 100%, $height: 10px, $gutter: 14px, $x: 0, $y: 0) {
-    $lines : ();
-    @for $i from 0 to $count {
-        $offset-lines: 0;
-        @if($i > 0) {
-            $offset-lines: ($height * $i);
-        }
-        $offset-y: ($gutter * $i) + $offset-lines + $y;
-        $lines : append($lines, rect($color, $width, $height, $x, $offset-y));
-    }
-    @return $lines;
-}
-
 @function shape($background, $background-size, $background-position) {
     @return (
         bg: $background,
@@ -27,12 +14,81 @@
     );
 }
 
-@function circle($color, $radius, $x, $y) {
+
+@function rect-outline($color, $width, $height, $x, $y, $outline: 1px, $fill: #ffffff) {
+
+    $outline-y : $y;
+    $outline-x : $x;
+
+    @if(type-of($x) == number) {
+        $outline-x: calc(#{$x} + #{$outline});
+    }
+
+    @if(type-of($y) == number) {
+        $outline-y: calc(#{$y} + #{$outline});
+    }
+
+    @return (
+        rect($color, $width, $height, $x, $y),
+        rect($fill, calc(#{$width} - #{$outline * 2}), calc(#{$height} - #{$outline * 2}), $outline-x, $outline-y)
+    );
+}
+
+@function circle($color, $diameter, $x, $y) {
     @return shape(
         (radial-gradient(circle at center, $color 0, $color 50%, transparent 50%, transparent 100%)),
-        (($radius * 2) ($radius * 2)),
+        ($diameter $diameter),
         ($x $y)
     );
+}
+
+@function circle-outline($color, $diameter, $x, $y, $outline: 1px, $fill : #ffffff) {
+
+
+    $outline-y : $y;
+    $outline-x : $x;
+
+    @if(type-of($x) == number) {
+        $outline-x: calc(#{$x} + #{$outline});
+    }
+
+    @if(type-of($y) == number) {
+        $outline-y: calc(#{$y} + #{$outline});
+    }
+
+    @return (
+            circle($fill, calc(#{$diameter} - #{$outline} * 2), $outline-x, $outline-y)
+            circle($color, $diameter, $x, $y)
+    );
+
+}
+
+@function lines($count: 15, $color: #fcfcfc, $width: 100%, $height: 10px, $gutter: 10px, $x: 0, $y: 0, $lastWidth: 100%, $outline: false, $outline-width: 1px, $outline-fill: #ffffff) {
+    $lines : ();
+    @for $i from 0 to $count {
+        $offset-lines: 0;
+        $line-width: $width;
+
+        @if($i > 0) {
+            $offset-lines: ($height * $i);
+        }
+
+        @if($i == ($count - 1)) {
+            $line-width: $lastWidth;
+        }
+
+        $offset-y: ($gutter * $i) + $offset-lines + $y;
+
+        $outlinedRect : rect-outline($color, $line-width, $height, $x, $offset-y, $outline-width, $outline-fill);
+
+        @if($outline) {
+            $lines : append($lines, nth($outlinedRect, 2));
+        }
+
+        $lines : append($lines, nth($outlinedRect, 1));
+    }
+
+    @return $lines;
 }
 
 @mixin skeleton($shapes...) {

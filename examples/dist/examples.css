@@ -1,7 +1,7 @@
 .s-profile-mini {
-  background: linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), radial-gradient(circle at center, #D8D8D8 0, #D8D8D8 50%, transparent 50%, transparent 100%);
-  background-size: calc(100% - 90px - 7px) 10px, calc(90% - 90px - 7px) 10px, calc(60% - 90px - 7px) 10px, 80px 80px;
-  background-position: 90px 17px, 90px 34px, 90px 51px, 0px 0px;
+  background: linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 50%, transparent 50%, transparent 100%), radial-gradient(circle at center, #B8B8B8 0, #B8B8B8 50%, transparent 50%, transparent 100%);
+  background-size: calc(100% - 90px - 7px) 10px, calc(90% - 90px - 7px) 10px, calc(60% - 90px - 7px) 10px, calc(80px - 4px * 2) calc(80px - 4px * 2), 80px 80px;
+  background-position: 90px 17px, 90px 34px, 90px 51px, calc(0px + 4px) calc(0px + 4px), 0px 0px;
   background-repeat: no-repeat;
   width: 300px;
   height: 80px; }
@@ -14,8 +14,8 @@
   height: 160px; }
 
 .s-text-lines {
-  background: linear-gradient(180deg, #cccccc, #cccccc), linear-gradient(180deg, #cccccc, #cccccc), linear-gradient(180deg, #cccccc, #cccccc), linear-gradient(180deg, #cccccc, #cccccc), linear-gradient(180deg, #cccccc, #cccccc);
-  background-size: 100% 10px, 100% 10px, 100% 10px, 100% 10px, 100% 10px;
-  background-position: 0 0px, 0 24px, 0 48px, 0 72px, 0 96px;
+  background: linear-gradient(180deg, white, white), linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, white, white), linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8);
+  background-size: calc(90% - 4px) calc(16px - 4px), 90% 16px, calc(50% - 4px) calc(16px - 4px), 50% 16px, 100% 14px, 100% 14px, 100% 14px, 100% 14px, 90% 14px;
+  background-position: center calc(0px + 2px), center 0px, center calc(28px + 2px), center 28px, center 70px, center 91px, center 112px, center 133px, center 154px;
   background-repeat: no-repeat;
   height: 300px; }

@@ -10,11 +10,21 @@ $off-top: 10px;
 
 @mixin skeleton-profile-small-300x80($color-accent: $default-color-accent, $color-default: $default-color) {
 
+    $lines : (
+            rect($color-accent, calc(100% - #{$off-left} - #{$gutter-default}), $typo-size-default, #{$off-left}, ($gutter-default + $off-top)),
+            rect($color-default, calc(90% - #{$off-left} - #{$gutter-default}), $typo-size-default, #{$off-left}, ($gutter-default * 2 + $typo-size-default + $off-top)),
+            rect($color-default, calc(60% - #{$off-left} - #{$gutter-default}), $typo-size-default, #{$off-left}, ($gutter-default * 3 + $typo-size-default * 2 + $off-top)),
+    );
+
+    $profile : circle-outline($color-accent, 80px, 0px, 0px, 4px, rgba(255,255,255,0.8));
+
+    $shapes : join(
+        $lines,
+        $profile
+    );
+
     @include skeleton(
-        rect($color-accent, calc(100% - #{$off-left} - #{$gutter-default}), $typo-size-default, #{$off-left}, ($gutter-default + $off-top)),
-        rect($color-default, calc(90% - #{$off-left} - #{$gutter-default}), $typo-size-default, #{$off-left}, ($gutter-default * 2 + $typo-size-default + $off-top)),
-        rect($color-default, calc(60% - #{$off-left} - #{$gutter-default}), $typo-size-default, #{$off-left}, ($gutter-default * 3 + $typo-size-default * 2 + $off-top)),
-        circle($color-default, ($typo-size-default * 4), 0px, 0px)
+        $shapes...
     );
 
     width: 300px;
