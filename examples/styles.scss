@@ -52,25 +52,120 @@ $typo-size-default: 10px;
 .s-video {
 
     $controls-height: 40px;
+    $play-button-data-uri: 'data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjE3OTIiIGhlaWdodD0iMTc5MiIgdmlld0JveD0iMCAwIDE3OTIgMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTU3NiA5MjdsLTEzMjggNzM4cS0yMyAxMy0zOS41IDN0LTE2LjUtMzZ2LTE0NzJxMC0yNiAxNi41LTM2dDM5LjUgM2wxMzI4IDczOHEyMyAxMyAyMyAzMXQtMjMgMzF6IiBmaWxsPSIjODg4ODg4IiAvPjwvc3ZnPg==';
 
     @include skeleton(
-        rect(#9C9C9C, 40%, 4px, 0, calc(100% - #{$controls-height})),
+
+        // Play-Button
+        shape(url($play-button-data-uri), (auto 30%), center calc(50% - #{$controls-height / 2})),
+
+        // Loading Bars
+        rect(#888888, 40%, 4px, 0, calc(100% - #{$controls-height})),
         rect(#f1f1f1, 100%, 4px, 0, calc(100% - #{$controls-height})),
+
+        // Controls Title / Subtitle and Square
         rect(#f1f1f1, $controls-height, $controls-height - 12px, 6px, calc(100% - 6px)),
         rect(#f1f1f1, 30%, 7px, ($controls-height + 12px), calc(100% - #{$controls-height - 15px})),
         rect(#f1f1f1, 10%, 7px, ($controls-height + 12px), calc(100% - #{$controls-height - 27px})),
-        rect(#C9C9C9, 100%, $controls-height, 0, 100%),
-        rect(#D8D8D8, 100%, 100%, 0, 0)
+
+        // Small shaded controls panel
+        shape(linear-gradient(180deg, #bbbbbb 0%, #C9C9C9 100%), (100% $controls-height), center bottom),
+
+        // radial background effect for fancier wall
+        shape(radial-gradient(circle at center, #f1f1f1 0%, #cccccc 100%), (100% 100%), center center)
     );
 
+    border-radius: 6px;
+
+    // Keep the 16:9 aspect ratio
     width: 100%;
     padding-top: 56.25%;
-    margin-bottom: 14px;
 }
 
 .s-text {
-
     $shapes : lines(15, #D8D8D8, 100%, 12px, 7px, 0px, 0px);
+    @include skeleton($shapes...);
+
+    width: 100%;
+    padding-top: 100%;
+}
+
+.s-rect-example {
+
+    @include skeleton(
+        rect(yellowgreen, 100%, 12px, 0px, 0px)
+    );
+
+    width: 100%;
+    padding-top: 100%;
+}
+
+.s-rect-outlined-example {
+
+    $outline: rect-outline(orange, 100%, 20px, 0px, 0px, 2px, white);
+
+    $shapes: (
+        nth($outline, 2),
+        nth($outline, 1)
+    );
+
+    @include skeleton(
+        $shapes...
+    );
+
+    width: 100%;
+    padding-top: 100%;
+}
+
+.s-circle-example {
+
+    @include skeleton(
+        circle(deeppink, 60px, 0, 0)
+    );
+
+    width: 100%;
+    padding-top: 100%;
+}
+
+.s-circle-outlined-example {
+
+    @include skeleton(
+        circle-outline(darkblue, 60px, center, 20px, 4px)...
+    );
+
+    width: 100%;
+    padding-top: 100%;
+}
+
+.s-multiple-lines-example {
+    $shapes : lines(15, #D8D8D8, 100%, 12px, 7px, 0px, 0px);
+    @include skeleton($shapes...);
+
+    width: 100%;
+    padding-top: 100%;
+}
+
+.s-multiple-lines-example-last-line {
+    $shapes : lines(4, #444444, 100%, 12px, 7px, 0px, 0px, 70%);
+    @include skeleton($shapes...);
+
+    width: 100%;
+    padding-top: 100%;
+}
+
+.s-multiple-lines-example-outline {
+    $shapes : lines(3, #123456, 100%, 30px, 10px, center, 0px, 90%, true, 4px, #ffffff);
+    @include skeleton($shapes...);
+
+    width: 100%;
+    padding-top: 100%;
+}
+
+.s-custom-shapes {
+
+    $shapes : lines(2, #de0000, 60%, 14px, 10px, center, 50px, 40%);
+    $shapes : append($shapes, shape(url('https://upload.wikimedia.org/wikipedia/commons/3/34/Red_star.svg'), (40px 40px), (center 0)));
+    $shapes : join($shapes, lines(4, #D8D8D8, 80%, 12px, 7px, center, 100px, 70%));
 
     @include skeleton($shapes...);
 
