@@ -1,6 +1,6 @@
 {
   "name": "empty-state",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Empty state skeleton builder scss mixins",
   "main": "index.js",
   "scripts": {
