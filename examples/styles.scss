@@ -102,15 +102,8 @@ $typo-size-default: 10px;
 
 .s-rect-outlined-example {
 
-    $outline: rect-outline(orange, 100%, 20px, 0px, 0px, 2px, white);
-
-    $shapes: (
-        nth($outline, 2),
-        nth($outline, 1)
-    );
-
     @include skeleton(
-        $shapes...
+        rect-outline(orange, 100%, 20px, 0px, 0px, 2px, white)...
     );
 
     width: 100%;

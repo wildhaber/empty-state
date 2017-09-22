@@ -2,7 +2,9 @@
 
 [empty-state](https://www.npmjs.com/package/empty-state) is a mix of Sass mixins and function to simplify the process drawing empty state skeleton backgrounds. These states are often used to provide an indication how the content that is loading is looking and it will be replaced when content is loaded.
 
----
+A detailed introduction you can find here:
+- [Draw Skeleton Backgrounds with Sass](https://medium.com/@hello.raphael/draw-skeleton-backgrounds-with-sass-2c1b1017d2d0) @ Medium.com
+
 
 # Installation
 
