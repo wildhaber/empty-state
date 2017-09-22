@@ -1,4 +1,4 @@
-![empty-state](https://raw.githubusercontent.com/wildhaber/empty-state/master/assets/readme_lead.png)
+![empty-state](https://raw.githubusercontent.com/wildhaber/empty-state/master/assets/readme_lead.png?token=AEfJht6Rpf7j8v2IQDcI4jNcAlxHD47Fks5Zzm0qwA%3D%3D)
 
 [empty-state](https://www.npmjs.com/package/empty-state) is a mix of Sass mixins and function to simplify the process drawing empty state skeleton backgrounds. These states are often used to provide an indication how the content that is loading is looking and it will be replaced when content is loaded.
 
@@ -116,7 +116,7 @@ skeleton($shapes...)
 
 Example:
 
-![empty-state](https://raw.githubusercontent.com/wildhaber/empty-state/master/assets/s-text-example.png)
+![empty-state](https://raw.githubusercontent.com/wildhaber/empty-state/master/assets/s-text-example.png?token=AEfJhoS1pZ12zE_SQZtkHd_JT4MA3w8mks5Zzm1hwA%3D%3Dg)
 
 ```sass
 .s-text-lines {
