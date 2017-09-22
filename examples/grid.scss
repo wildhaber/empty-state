@@ -1,0 +1,14 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: repeat(3, 1fr);
+}
+.main {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.aside {
+    grid-column: 3 / 3;
+    grid-row: 1;
+}

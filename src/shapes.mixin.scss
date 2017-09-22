@@ -63,7 +63,7 @@
 
 }
 
-@function lines($count: 15, $color: #fcfcfc, $width: 100%, $height: 10px, $gutter: 10px, $x: 0, $y: 0, $lastWidth: 100%, $outline: false, $outline-width: 1px, $outline-fill: #ffffff) {
+@function lines($count: 3, $color: #fcfcfc, $width: 100%, $height: 10px, $gutter: 10px, $x: 0, $y: 0, $lastWidth: 100%, $outline: false, $outline-width: 1px, $outline-fill: #ffffff) {
     $lines : ();
     @for $i from 0 to $count {
         $offset-lines: 0;

@@ -1,21 +1,45 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: repeat(3, 1fr); }
+
+.main {
+  grid-column: 1 / 3;
+  grid-row: 1; }
+
+.aside {
+  grid-column: 3 / 3;
+  grid-row: 1; }
+
 .s-profile-mini {
-  background: linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 50%, transparent 50%, transparent 100%), radial-gradient(circle at center, #B8B8B8 0, #B8B8B8 50%, transparent 50%, transparent 100%);
-  background-size: calc(100% - 90px - 7px) 10px, calc(90% - 90px - 7px) 10px, calc(60% - 90px - 7px) 10px, calc(80px - 4px * 2) calc(80px - 4px * 2), 80px 80px;
-  background-position: 90px 17px, 90px 34px, 90px 51px, calc(0px + 4px) calc(0px + 4px), 0px 0px;
+  background: linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), radial-gradient(circle at center, #D8D8D8 0, #D8D8D8 50%, transparent 50%, transparent 100%);
+  background-size: calc(100% - 90px - 7px) 10px, calc(90% - 90px - 7px) 10px, calc(60% - 90px - 7px) 10px, 80px 80px;
+  background-position: 90px 17px, 90px 34px, 90px 51px, 0px 0px;
   background-repeat: no-repeat;
   width: 300px;
   height: 80px; }
 
-.s-text {
-  background: linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8);
-  background-size: calc(80% - 14px) 20px, calc(100% - 14px) 10px, calc(100% - 14px) 10px, calc(100% - 14px) 10px, calc(60% - 14px) 10px;
-  background-position: 7px -3px, 7px 24px, 7px 41px, 7px 58px, 7px 75px;
-  background-repeat: no-repeat;
-  height: 160px; }
-
 .s-text-lines {
   background: linear-gradient(180deg, white, white), linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, white, white), linear-gradient(180deg, #B8B8B8, #B8B8B8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8);
-  background-size: calc(90% - 4px) calc(16px - 4px), 90% 16px, calc(50% - 4px) calc(16px - 4px), 50% 16px, 100% 14px, 100% 14px, 100% 14px, 100% 14px, 90% 14px;
-  background-position: center calc(0px + 2px), center 0px, center calc(28px + 2px), center 28px, center 70px, center 91px, center 112px, center 133px, center 154px;
+  background-size: calc(90% - 4px) calc(20px - 4px), 90% 20px, calc(50% - 4px) calc(20px - 4px), 50% 20px, 100% 14px, 100% 14px, 100% 14px, 100% 14px, 90% 14px;
+  background-position: center calc(0px + 2px), center 0px, center calc(30px + 2px), center 30px, center 80px, center 101px, center 122px, center 143px, center 164px;
   background-repeat: no-repeat;
-  height: 300px; }
+  height: 190px; }
+
+.s-video {
+  background: linear-gradient(180deg, #9C9C9C, #9C9C9C), linear-gradient(180deg, #f1f1f1, #f1f1f1), linear-gradient(180deg, #f1f1f1, #f1f1f1), linear-gradient(180deg, #f1f1f1, #f1f1f1), linear-gradient(180deg, #f1f1f1, #f1f1f1), linear-gradient(180deg, #C9C9C9, #C9C9C9), linear-gradient(180deg, #D8D8D8, #D8D8D8);
+  background-size: 40% 4px, 100% 4px, 40px 28px, 30% 7px, 10% 7px, 100% 40px, 100% 100%;
+  background-position: 0 calc(100% - 40px), 0 calc(100% - 40px), 6px calc(100% - 6px), 52px calc(100% - 25px), 52px calc(100% - 13px), 0 100%, 0 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 56.25%;
+  margin-bottom: 14px; }
+
+.s-text {
+  background: linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8), linear-gradient(180deg, #D8D8D8, #D8D8D8);
+  background-size: 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px, 100% 12px;
+  background-position: 0px 0px, 0px 19px, 0px 38px, 0px 57px, 0px 76px, 0px 95px, 0px 114px, 0px 133px, 0px 152px, 0px 171px, 0px 190px, 0px 209px, 0px 228px, 0px 247px, 0px 266px;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 100%; }
