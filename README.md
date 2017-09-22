@@ -116,7 +116,7 @@ skeleton($shapes...)
 
 Example:
 
-![empty-state](https://raw.githubusercontent.com/wildhaber/empty-state/master/assets/s-text-example.png?token=AEfJhoS1pZ12zE_SQZtkHd_JT4MA3w8mks5Zzm1hwA%3D%3Dg)
+![empty-state](https://raw.githubusercontent.com/wildhaber/empty-state/master/assets/s-text-example.png?token=AEfJhoS1pZ12zE_SQZtkHd_JT4MA3w8mks5Zzm1hwA%3D%3D)
 
 ```sass
 .s-text-lines {
