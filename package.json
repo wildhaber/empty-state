@@ -1,11 +1,11 @@
 {
   "name": "empty-state",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Empty state skeleton builder scss mixins",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js --mode production",
     "build:watch": "./node_modules/.bin/webpack --config webpack.config.js --watch",
     "serve": "./node_modules/.bin/http-server examples/dist"
   },
@@ -29,12 +29,13 @@
   },
   "homepage": "https://github.com/wildhaber/empty-state#readme",
   "devDependencies": {
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "http-server": "^0.10.0",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "webpack": "^3.6.0"
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.1",
+    "http-server": "^0.12.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
