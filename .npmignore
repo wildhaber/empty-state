@@ -1,2 +1,4 @@
 examples/
 assets/
+.idea/
+webpack.config.js
